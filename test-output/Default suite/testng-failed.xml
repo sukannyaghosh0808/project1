@@ -7,7 +7,9 @@
         <methods>
           <include name="verifyTitle"/>
           <include name="teardown"/>
+          <include name="loginClick"/>
           <include name="setUp"/>
+          <include name="LoginButtonTest"/>
           <include name="openTest"/>
           <include name="closeTest"/>
         </methods>

@@ -37,7 +37,7 @@ public class loginPageTest extends BaseClass {
 	@BeforeClass
 	public void openTest()
 	{
-		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Reports\\login.html", true);
+		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\freeCRM\\Reports\\login.html", true);
 		test = report.startTest("Login Page");		
 	}
 	
@@ -53,12 +53,12 @@ public class loginPageTest extends BaseClass {
 	{
 		setup();		 
 	}
-	@AfterSuite
+	@AfterTest
 	public void teardown()
 	{
 		driver.close();
 	}
-	@Test
+	@Test(priority=1)
 	public static void verifyTitle()
 	{
 		pg= new loginPage();
@@ -66,7 +66,7 @@ public class loginPageTest extends BaseClass {
 		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, marketing campaigns and support.");
 	}
 	
-	@Test
+	@Test(priority=2)
 	public static void LoginButtonTest()
 	{
 		pg=new loginPage();
@@ -81,7 +81,7 @@ public class loginPageTest extends BaseClass {
 		}
 	}
 	
-	@Test
+	@Test(priority=3)
 	public static void loginClick()
 	{
 		pg=new loginPage();

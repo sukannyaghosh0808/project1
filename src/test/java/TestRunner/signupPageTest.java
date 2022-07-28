@@ -27,13 +27,13 @@ public class signupPageTest extends BaseClass {
 	public void setUp() {
 		setup();
 	}
-	@AfterSuite
+	@AfterTest
 	public static void tearDown() {
 		driver.close();
 	}
 	@BeforeClass
 	public static void openTestReport() {
-		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Reports\\signUp.html",true);
+		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\freeCRM\\Reports\\signUp.html",true);
 		test= report.startTest("Sign up page");
 	}
 	@AfterClass
