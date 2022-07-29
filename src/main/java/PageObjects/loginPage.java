@@ -27,16 +27,9 @@ public class loginPage extends BaseClass {
 		return driver.getTitle();		
 	}
 	
-	public Boolean loginButtonTest()
-	{
-		
-		return login.isEnabled();
-		
-	}
-	public void loginButtonClick()//do i need to perform the actions in page class	                              
-	{								//or in test class?
-		login.isDisplayed();
-		login.click();
+	public WebElement loginButton()//do i need to perform the actions in page class	                              
+	{								//or in test class?		
+		return login;
     }
 
 	

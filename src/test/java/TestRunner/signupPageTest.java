@@ -1,6 +1,7 @@
 package TestRunner;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.AfterClass;
@@ -71,6 +72,8 @@ public class signupPageTest extends BaseClass {
 		String email= rd.readData("email");
 		System.out.print(email);
 		sg=new SignupPage();
-		//sg.email().sendKeys(email);
+		sg.email().sendKeys(email);
+		
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 }
