@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-30T10:37:41 IST" name="Suite" finished-at="2022-07-30T10:38:06 IST" duration-ms="25493">
+    <groups>
+    </groups>
+    <test started-at="2022-07-30T10:37:41 IST" name="login" finished-at="2022-07-30T10:37:56 IST" duration-ms="15046">
+      <class name="TestRunner.loginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:41 IST" name="setUp" finished-at="2022-07-30T10:37:49 IST" duration-ms="8227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openTest()[pri:0, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:49 IST" name="openTest" finished-at="2022-07-30T10:37:50 IST" duration-ms="381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTest -->
+        <test-method signature="verifyTitle()[pri:1, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:50 IST" name="verifyTitle" finished-at="2022-07-30T10:37:50 IST" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="LoginButtonTest()[pri:2, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:50 IST" name="LoginButtonTest" finished-at="2022-07-30T10:37:50 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginButtonTest -->
+        <test-method signature="loginClick()[pri:3, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:50 IST" name="loginClick" finished-at="2022-07-30T10:37:54 IST" duration-ms="4194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginClick -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:54 IST" name="closeTest" finished-at="2022-07-30T10:37:56 IST" duration-ms="1742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:TestRunner.loginPageTest@37d4349f]" started-at="2022-07-30T10:37:56 IST" name="teardown" finished-at="2022-07-30T10:37:56 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestRunner.loginPageTest -->
+    </test> <!-- login -->
+    <test started-at="2022-07-30T10:37:56 IST" name="signup" finished-at="2022-07-30T10:38:06 IST" duration-ms="10382">
+      <class name="TestRunner.signupPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:37:56 IST" name="setUp" finished-at="2022-07-30T10:38:02 IST" duration-ms="5956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="openTestReport()[pri:0, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:02 IST" name="openTestReport" finished-at="2022-07-30T10:38:02 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTestReport -->
+        <test-method signature="logoTest()[pri:0, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:02 IST" name="logoTest" finished-at="2022-07-30T10:38:02 IST" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoTest -->
+        <test-method signature="signupButtonClickTest()[pri:1, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:02 IST" name="signupButtonClickTest" finished-at="2022-07-30T10:38:02 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupButtonClickTest -->
+        <test-method signature="signupButtonTest()[pri:2, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:02 IST" name="signupButtonTest" finished-at="2022-07-30T10:38:06 IST" duration-ms="3870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupButtonTest -->
+        <test-method signature="signupTest()[pri:3, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:06 IST" name="signupTest" finished-at="2022-07-30T10:38:06 IST" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:06 IST" name="closeTest" finished-at="2022-07-30T10:38:06 IST" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestRunner.signupPageTest@6fdbe764]" started-at="2022-07-30T10:38:06 IST" name="tearDown" finished-at="2022-07-30T10:38:06 IST" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestRunner.signupPageTest -->
+    </test> <!-- signup -->
+  </suite> <!-- Suite -->
+</testng-results>
