@@ -3,9 +3,28 @@
   <groupId>MFS</groupId>
   <artifactId>testFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <properties>
+   <maven.compiler.source>7</maven.compiler.source>
+   <maven.compiler.target>7</maven.compiler.target>
+ </properties>
+
+<build>
+<pluginManagement>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>2.22.1</version>
+    </plugin>
+  </plugins>
+</pluginManagement>
+</build>
   <dependencies>
-  
+  <dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <version>1.18.22</version>
+</dependency>
   <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
@@ -26,6 +45,13 @@
     <artifactId>json-simple</artifactId>
     <version>1.1.1</version>
 </dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.3</version>
+    <scope>compile</scope>
+</dependency>
+
 
   </dependencies>
 </project>
