@@ -19,7 +19,7 @@ public class BaseClass {
 		prop = new Properties();
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream("C:\\Users\\Sukannya Ghosh\\eclipse-workspace\\testFramework\\config.properties");
+			fis = new FileInputStream("C:\\Users\\Sukannya Ghosh\\eclipse-workspace\\project1\\config.properties");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,7 +38,7 @@ public class BaseClass {
 		
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
 		}
 		else
