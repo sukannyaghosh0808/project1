@@ -27,7 +27,7 @@ public class signupPageTest extends BaseClass {
 	public void setUp() {
 		setup();
 	}
-	@AfterSuite
+	@AfterTest
 	public static void tearDown() {
 		driver.quit();
 	}

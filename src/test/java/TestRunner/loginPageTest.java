@@ -54,7 +54,7 @@ public class loginPageTest extends BaseClass {
 	{
 		setup();		 
 	}
-	@AfterSuite
+	@AfterTest
 	public void teardown()
 	{
 		driver.quit();
