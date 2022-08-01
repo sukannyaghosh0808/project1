@@ -29,7 +29,7 @@ public class signupPageTest extends BaseClass {
 	}
 	@AfterSuite
 	public static void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 	@BeforeClass
 	public static void openTestReport() {
@@ -69,7 +69,7 @@ public class signupPageTest extends BaseClass {
 	{
 		JSONReader rd = new JSONReader();
 		String email= rd.readData("email");
-		System.out.print(email);
+		//System.out.print(email);
 		sg=new SignupPage();
 		sg.email().sendKeys(email);
 	}

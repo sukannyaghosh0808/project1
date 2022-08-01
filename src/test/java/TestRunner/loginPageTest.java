@@ -38,7 +38,7 @@ public class loginPageTest extends BaseClass {
 	@BeforeClass
 	public void openTest()
 	{
-		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Reports\\login.html", true);
+		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Reports\\login.html", true);
 		test = report.startTest("Login Page");		
 	}
 	
@@ -57,14 +57,14 @@ public class loginPageTest extends BaseClass {
 	@AfterSuite
 	public void teardown()
 	{
-		driver.close();
+		driver.quit();
 	}
 	@Test(priority=0)
 	public static void verifyTitle()
 	{
 		pg= new loginPage();
 		String actual = pg.getTitle();
-		System.out.print(actual);
+		//System.out.print(actual);
 		String expected="Free CRM software for customer relationship management, sales, marketing campaigns and support.";
 		Assert.assertEquals(actual,expected);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
