@@ -58,15 +58,17 @@ public class loginPageTest extends BaseClass {
 	{
 		driver.close();
 	}
-	@Test
+	@Test(priority=1)
 	public static void verifyTitle()
 	{
 		pg= new loginPage();
-		String title = pg.getTitle();
-		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, marketing campaigns and support.");
+		String actual = pg.getTitle();
+		System.out.print(actual);
+		String expected="Free CRM software for customer relationship management, sales, marketing campaigns and support.";
+		Assert.assertEquals(actual,expected);
 	}
 	
-	@Test
+	@Test(priority=2)
 	public static void LoginButtonTest()
 	{
 		pg=new loginPage();
@@ -81,7 +83,7 @@ public class loginPageTest extends BaseClass {
 		}
 	}
 	
-	@Test
+	@Test(priority=3)
 	public static void loginClick()
 	{
 		pg=new loginPage();
