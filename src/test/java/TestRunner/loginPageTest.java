@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -31,13 +30,14 @@ public class loginPageTest extends BaseClass {
 	
 	//why we need to use super here? this constructor came automatically
 	public loginPageTest() throws IOException {
-		super();		
+		super();
+		
 	}
 	
 	@BeforeClass
 	public void openTest()
 	{
-		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\freeCRM\\Reports\\login.html", true);
+		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Reports\\login.html", true);
 		test = report.startTest("Login Page");		
 	}
 	
@@ -45,34 +45,33 @@ public class loginPageTest extends BaseClass {
 	public static void closeTest()
 	{
 	  report.endTest(test);
-	  report.flush();	
+	  report.flush();
+		
 	}
-	
 	@BeforeTest
 	public static void setUp() throws IOException
 	{
 		setup();		 
 	}
-	@AfterTest
+	@AfterSuite
 	public void teardown()
 	{
 		driver.close();
 	}
-	
-	@Test(priority=1)
+	@Test
 	public static void verifyTitle()
 	{
 		pg= new loginPage();
 		String title = pg.getTitle();
-		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, marketing campaigns and support.");	
+		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, marketing campaigns and support.");
 	}
 	
-	@Test(priority=2)
+	@Test
 	public static void LoginButtonTest()
 	{
 		pg=new loginPage();
-		Boolean flag = pg.loginButton().isDisplayed();
-		if(flag==true)
+		Boolean flag=pg.loginButtonTest();
+		if (flag==true)
 		{
 			 test.log(LogStatus.PASS,"Test case passed");    
 		}
@@ -80,16 +79,13 @@ public class loginPageTest extends BaseClass {
 		{
 			test.log(LogStatus.FAIL,"Test case passed");    
 		}
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 	
-	@Test(priority=3)
+	@Test
 	public static void loginClick()
 	{
 		pg=new loginPage();
-		pg.loginButton().click();
-		//Assert.assertTrue(pg.loginButton().isDisplayed(),"login button not working");
-		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);		
+		pg.loginButtonClick();
 	}
 
 }

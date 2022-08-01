@@ -47,9 +47,7 @@ public class BaseClass {
 		}
 		
 		driver.get(prop.getProperty("url"));
-		//maximise screen
 		driver.manage().window().maximize();
-		//wait
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
 	}

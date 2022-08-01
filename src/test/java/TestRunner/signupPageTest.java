@@ -1,7 +1,6 @@
 package TestRunner;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.AfterClass;
@@ -28,13 +27,13 @@ public class signupPageTest extends BaseClass {
 	public void setUp() {
 		setup();
 	}
-	@AfterTest
+	@AfterSuite
 	public static void tearDown() {
 		driver.close();
 	}
 	@BeforeClass
 	public static void openTestReport() {
-		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\freeCRM\\Reports\\signUp.html",true);
+		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Reports\\signUp.html",true);
 		test= report.startTest("Sign up page");
 	}
 	@AfterClass
@@ -72,8 +71,6 @@ public class signupPageTest extends BaseClass {
 		String email= rd.readData("email");
 		System.out.print(email);
 		sg=new SignupPage();
-		sg.email().sendKeys(email);
-		
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		//sg.email().sendKeys(email);
 	}
 }
