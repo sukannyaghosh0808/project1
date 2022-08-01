@@ -35,7 +35,7 @@ public class loginPage extends BaseClass {
 	}
 	public void loginButtonClick()//do i need to perform the actions in page class	                              
 	{								//or in test class?
-		login.isDisplayed();
+		
 		login.click();
     }
 
