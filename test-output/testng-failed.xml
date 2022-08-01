@@ -7,11 +7,22 @@
         <methods>
           <include name="verifyTitle"/>
           <include name="teardown"/>
+          <include name="loginClick"/>
           <include name="setUp"/>
+          <include name="LoginButtonTest"/>
           <include name="openTest"/>
           <include name="closeTest"/>
         </methods>
       </class> <!-- TestRunner.loginPageTest -->
+      <class name="TestRunner.signupPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="openTestReport"/>
+          <include name="setUp"/>
+          <include name="closeTest"/>
+          <include name="signupTest"/>
+        </methods>
+      </class> <!-- TestRunner.signupPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

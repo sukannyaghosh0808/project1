@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -58,7 +59,7 @@ public class loginPageTest extends BaseClass {
 	{
 		driver.close();
 	}
-	@Test(priority=1)
+	@Test(priority=0)
 	public static void verifyTitle()
 	{
 		pg= new loginPage();
@@ -66,9 +67,10 @@ public class loginPageTest extends BaseClass {
 		System.out.print(actual);
 		String expected="Free CRM software for customer relationship management, sales, marketing campaigns and support.";
 		Assert.assertEquals(actual,expected);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 	
-	@Test(priority=2)
+	@Test(priority=1)
 	public static void LoginButtonTest()
 	{
 		pg=new loginPage();
@@ -81,13 +83,15 @@ public class loginPageTest extends BaseClass {
 		{
 			test.log(LogStatus.FAIL,"Test case passed");    
 		}
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 	
-	@Test(priority=3)
+	@Test(priority=2)
 	public static void loginClick()
 	{
 		pg=new loginPage();
 		pg.loginButtonClick();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 
 }
