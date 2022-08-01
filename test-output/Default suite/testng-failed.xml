@@ -3,17 +3,6 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestRunner.loginPageTest">
-        <methods>
-          <include name="verifyTitle"/>
-          <include name="teardown"/>
-          <include name="loginClick"/>
-          <include name="setUp"/>
-          <include name="LoginButtonTest"/>
-          <include name="openTest"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- TestRunner.loginPageTest -->
       <class name="TestRunner.signupPageTest">
         <methods>
           <include name="tearDown"/>

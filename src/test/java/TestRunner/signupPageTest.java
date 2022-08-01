@@ -71,6 +71,6 @@ public class signupPageTest extends BaseClass {
 		String email= rd.readData("email");
 		System.out.print(email);
 		sg=new SignupPage();
-		//sg.email().sendKeys(email);
+		sg.email().sendKeys(email);
 	}
 }
