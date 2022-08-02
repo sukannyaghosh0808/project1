@@ -53,7 +53,7 @@ public class signupPageTest extends BaseClass {
 		{
 			test.log(LogStatus.PASS, "Logo is displayed");
 		}		
-		System.out.println("sign up Logo check done---PASSED");
+		System.out.println("1 sign up Logo check done---PASSED");
 	}
 	@Test(priority=1)
 	public static void signupButtonClickTest() {
@@ -62,13 +62,13 @@ public class signupPageTest extends BaseClass {
 		{
 			test.log(LogStatus.PASS, "signup button is clickable");
 		}
-		System.out.println("sign up button check done---PASSED");
+		System.out.println("2 sign up button check done---PASSED");
 	}
 	@Test(priority=2)
 	public static void signupButtonTest() {
 		sg=new SignupPage();
 		sg.signupButtonclick();	
-		System.out.println("sign up click---PASSED");
+		System.out.println(" 3 sign up click---PASSED");
 		
 	}
 	@Test(priority=3)
@@ -80,6 +80,6 @@ public class signupPageTest extends BaseClass {
 		sg=new SignupPage();
 		sg.email().sendKeys(email);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		System.out.println("sign up page email sent--PASSED");
+		System.out.println("4 sign up page email sent--PASSED");
 	}
 }
