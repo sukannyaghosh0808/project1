@@ -77,6 +77,7 @@ public class signupPageTest extends BaseClass {
 		JSONReader rd = new JSONReader();
 		String email= rd.readData("email");
 		//System.out.print(email);
+		
 		sg=new SignupPage();
 		sg.email().sendKeys(email);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);

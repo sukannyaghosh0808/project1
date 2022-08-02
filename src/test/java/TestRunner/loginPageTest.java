@@ -80,7 +80,8 @@ public class loginPageTest extends BaseClass {
 		Boolean flag=pg.loginButtonTest();
 		if (flag==true)
 		{
-			 test.log(LogStatus.PASS,"Test case passed");    
+			 test.log(LogStatus.PASS,"Test case passed");   
+			 
 		}
 		else 
 		{
