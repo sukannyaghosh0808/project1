@@ -53,11 +53,13 @@ public class loginPageTest extends BaseClass {
 	public static void setUp() throws IOException
 	{
 		setup();		 
+		System.out.println("login page launch done---PASSED");
 	}
 	@AfterTest
 	public void teardown()
 	{
 		driver.quit();
+		System.out.println("login page closed ---PASSED");
 	}
 	@Test(priority=0)
 	public static void verifyTitle()
@@ -68,6 +70,7 @@ public class loginPageTest extends BaseClass {
 		String expected="Free CRM software for customer relationship management, sales, marketing campaigns and support.";
 		Assert.assertEquals(actual,expected);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		System.out.println("login page verify title ---PASSED");
 	}
 	
 	@Test(priority=1)
@@ -84,6 +87,7 @@ public class loginPageTest extends BaseClass {
 			test.log(LogStatus.FAIL,"Test case passed");    
 		}
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		System.out.println("login button check ---PASSED");
 	}
 	
 	@Test(priority=2)
@@ -92,6 +96,7 @@ public class loginPageTest extends BaseClass {
 		pg=new loginPage();
 		pg.loginButtonClick();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		System.out.println("login button click ---PASSED");
 	}
 
 }
