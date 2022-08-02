@@ -29,16 +29,19 @@ public class signupPageTest extends BaseClass {
 		setup();
 		System.out.println("signup page browser opened---PASSED");
 	}
+	
 	@AfterTest
 	public static void tearDown() {
 		driver.quit();
 		System.out.println("signup page browser CLOSED---PASSED");
 	}
+	
 	@BeforeClass
 	public static void openTestReport() {
 		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Reports\\signUp.html",true);
 		test= report.startTest("Sign up page");
 	}
+	
 	@AfterClass
 	public static void closeTest(){
 		report.endTest(test);
@@ -55,6 +58,7 @@ public class signupPageTest extends BaseClass {
 		}		
 		System.out.println("1 sign up Logo check done---PASSED");
 	}
+	
 	@Test(priority=1)
 	public static void signupButtonClickTest() {
 		sg=new SignupPage();
@@ -64,6 +68,7 @@ public class signupPageTest extends BaseClass {
 		}
 		System.out.println("2 sign up button check done---PASSED");
 	}
+	
 	@Test(priority=2)
 	public static void signupButtonTest() {
 		sg=new SignupPage();
@@ -71,6 +76,7 @@ public class signupPageTest extends BaseClass {
 		System.out.println(" 3 sign up click---PASSED");
 		
 	}
+	
 	@Test(priority=3)
 	public static void signupTest() throws IOException, ParseException
 	{

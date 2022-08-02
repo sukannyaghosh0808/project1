@@ -49,18 +49,21 @@ public class loginPageTest extends BaseClass {
 	  report.flush();
 		
 	}
+	
 	@BeforeTest
 	public static void setUp() throws IOException
 	{
 		setup();		 
 		System.out.println("login page launch done---PASSED");
 	}
+	
 	@AfterTest
 	public void teardown()
 	{
 		driver.quit();
 		System.out.println("login page closed ---PASSED");
 	}
+	
 	@Test(priority=0)
 	public static void verifyTitle()
 	{
