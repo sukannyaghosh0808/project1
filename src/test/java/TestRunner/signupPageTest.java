@@ -1,6 +1,7 @@
 package TestRunner;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.AfterClass;
@@ -26,14 +27,16 @@ public class signupPageTest extends BaseClass {
 	@BeforeTest
 	public void setUp() {
 		setup();
+		System.out.println("signup page browser opened---PASSED");
 	}
-	@AfterSuite
+	@AfterTest
 	public static void tearDown() {
-		driver.close();
+		driver.quit();
+		System.out.println("signup page browser CLOSED---PASSED");
 	}
 	@BeforeClass
 	public static void openTestReport() {
-		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\testFramework\\Reports\\signUp.html",true);
+		report = new ExtentReports("C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Reports\\signUp.html",true);
 		test= report.startTest("Sign up page");
 	}
 	@AfterClass
@@ -50,6 +53,7 @@ public class signupPageTest extends BaseClass {
 		{
 			test.log(LogStatus.PASS, "Logo is displayed");
 		}		
+		System.out.println("1 sign up Logo check done---PASSED");
 	}
 	@Test(priority=1)
 	public static void signupButtonClickTest() {
@@ -58,19 +62,25 @@ public class signupPageTest extends BaseClass {
 		{
 			test.log(LogStatus.PASS, "signup button is clickable");
 		}
+		System.out.println("2 sign up button check done---PASSED");
 	}
 	@Test(priority=2)
 	public static void signupButtonTest() {
 		sg=new SignupPage();
 		sg.signupButtonclick();	
+		System.out.println(" 3 sign up click---PASSED");
+		
 	}
 	@Test(priority=3)
 	public static void signupTest() throws IOException, ParseException
 	{
 		JSONReader rd = new JSONReader();
 		String email= rd.readData("email");
-		System.out.print(email);
+		//System.out.print(email);
+		
 		sg=new SignupPage();
-		//sg.email().sendKeys(email);
+		sg.email().sendKeys(email);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		System.out.println("4 sign up page email sent--PASSED");
 	}
 }

@@ -13,7 +13,7 @@ public class JSONReader {
 	public String  readData(String value) throws IOException, ParseException
 	{
 		JSONParser jsonparser = new JSONParser();
-		FileReader reader = new FileReader("C:\\Users\\Sukannya Ghosh\\eclipse-workspace\\testFramework\\src\\main\\java\\Utilities\\testData.json");
+		FileReader reader = new FileReader("C:\\Users\\Sukannya Ghosh\\eclipse-workspace\\project1\\src\\main\\java\\Utilities\\testData.json");
 		String creds;
 		Object obj = jsonparser.parse(reader);
 		
