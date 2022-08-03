@@ -4,8 +4,7 @@
   <test thread-count="1" name="loginTest">
     <classes>
              <class name="TestRunner.loginPageTest"/>
-               
-    </classes>
+      </classes>
   </test>
   <test thread-count="1" name="signupTest">
     <classes>
