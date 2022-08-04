@@ -35,8 +35,9 @@ public class BaseClass {
 		public static void setup() 
 		{
 		String browserName = prop.getProperty("browser");
+		String platform=prop.getProperty("platform");
 		
-		if(browserName.equalsIgnoreCase("chrome"))
+		if(browserName.equalsIgnoreCase("chrome")  )
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
