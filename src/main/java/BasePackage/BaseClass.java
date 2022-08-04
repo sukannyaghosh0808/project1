@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class BaseClass {
 	
@@ -41,8 +42,14 @@ public class BaseClass {
 		if(browserName.equalsIgnoreCase("chrome")  )
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Drivers\\chromedriver.exe");
+			
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(false);
+			options.addArguments("--headless");
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			options.merge(capabilities);
+
 			driver=new ChromeDriver(options);
 		}
 		else
