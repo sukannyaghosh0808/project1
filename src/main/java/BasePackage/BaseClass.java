@@ -41,9 +41,9 @@ public class BaseClass {
 		if(browserName.equalsIgnoreCase("chrome")  )
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\SUKANNYA GHOSH\\eclipse-workspace\\project1\\Drivers\\chromedriver.exe");
-			driver=new ChromeDriver();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(false);
+			driver=new ChromeDriver(options);
 		}
 		else
 		{
